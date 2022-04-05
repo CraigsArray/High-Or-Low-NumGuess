@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>NumGame</title>
   </head>
-  <body>
+  <body style="text-align: center; font-size: x-large;">
 
     <h1>Welcome to the High or Low game</h1>
-    <p>Guess the number I'm thinking of between 1 and 100. You get 6 guesses and I'll tell you if it's higher or lower than your previous guess.</p>
+    <p>Guess the number I'm thinking of between 1 and 100.<br>You get 6 guesses and I'll tell you if it's higher or lower than your previous guess.</p>
     <p>Type a number and hit ENTER to submit.</p>
 
     <p id="playerChoice"></p></p>
@@ -83,6 +83,7 @@
                 computerMove = computerMove = Math.floor(Math.random() * (max - min) + min).toString(); //next pick
                 console.log("LOSE computer move " + computerMove);
                 console.log("LOSE player move " + playerMove); 
+                document.getElementById("higherOrLower").innerHTML = "";
                 alert('LOSER') 
                 }
             }
@@ -99,6 +100,7 @@
                     computerMove = computerMove = Math.floor(Math.random() * (max - min) + min).toString(); //next pick
                     console.log("LOSE computer move " + computerMove);
                     console.log("LOSE player move " + playerMove);
+                    document.getElementById("higherOrLower").innerHTML = "";
                     alert('LOSER')
                     }
             }
