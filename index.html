@@ -55,6 +55,8 @@
         if (event.which === 13) { //ENTER TO SUBMIT
 
             finalMove = playerMove.join(''); 
+            playerMove = [];
+            document.getElementById("playerChoice").innerHTML = "Your Guess: " + playerMove.join('');
             guesses_sofar.push(finalMove);         
             
             console.log('finalmoveType =' + typeof(finalMove))
@@ -104,7 +106,6 @@
                     alert('LOSER')
                     }
             }
-            playerMove = [];
             finalMove = '';          
         }
 
